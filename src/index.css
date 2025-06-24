@@ -10,6 +10,7 @@ html,body,#root{
 
 @theme{
     --color-primary:#111315;
+    --color-green-dull:#21251F;
     --color-green:#C8F560;
     --color-primary-dull:#4E515C;
     --color-purple:#7862F8;

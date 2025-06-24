@@ -5,7 +5,7 @@ const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
     return (
         <div className='relative flex justify-between py-8 px-10 dark:text-white sm:px-20 sm:mb-3 md:mb-0'>
-            <a href="/"><h1 className='text-2xl font-extrabold cursor-none max-sm:text-lg lg:text-3xl text-green'>Ankit.</h1></a>
+            <a href="/"><h1 className='text-2xl font-extrabold cursor-none lg:text-3xl text-green'>Ankit.</h1></a>
             <nav className='flex gap-10 text-lg max-sm:hidden'>
                 <a className='dark:hover:text-purple' href="#about">About</a>
                 <a className='dark:hover:text-purple' href="#experience">Experience</a>
