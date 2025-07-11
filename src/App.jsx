@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="font-[Poppins] w-full dark:bg-primary dark:text-primary-dull">
       <Navbar />
-      <div className='flex flex-col gap-10'>
+      <div className='flex flex-col gap-10 md:gap-20'>
         <Hero />
         <AboutMe />
         <Experience />

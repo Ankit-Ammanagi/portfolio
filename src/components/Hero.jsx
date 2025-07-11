@@ -14,7 +14,7 @@ const Hero = () => {
                     <h2 className="text-stroke-orange text-2xl font-bold text-transparent sm:text-3xl">Web Developer.</h2>
                 </div>
                 <div className="flex gap-2.5 justify-between items-center font-bold">
-                    <button className="border rounded-4xl px-5 py-2.5 transform duration-900 cursor-pointer dark:text-white dark:hover:bg-purple dark:hover:text-black">Download CV</button>
+                    <a href="/Intern_Ankit_Ammanagi.pdf" target="_blank"><button className="border rounded-4xl px-5 py-2.5 transform duration-900 cursor-pointer dark:text-white dark:hover:bg-purple dark:hover:text-black">Download CV</button></a>
                     <a href="#contact"><button className="border rounded-4xl px-5 py-2.5 transform duration-900 cursor-pointer hover:text-black hover:bg-white dark:text-black dark:bg-green dark:hover:text-white dark:hover:bg-primary">Contact Info</button></a>
                 </div>
                 <div className="dark:text-white text-5xl flex gap-10 mt-3 justify-center items-center text-center w-full">
