@@ -1,15 +1,16 @@
 import { useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Sphere from "./Sphere";
+import Sphere from "./Spheres/Sphere";
 
 const Hero = () => {
     const btnRef = useRef(null);
     const textRef = useRef(null);
 
     return (
-        <div className='w-full flex flex-col gap-3 justify-evenly items-center sm:gap-5 sm:flex-row px-4 sm:px-10'>
-            <div className='w-[70%] sm:w-[50%] lg:w-[40%] xl:w-[30%] aspect-square'>
-                <Sphere/>
+        <div className='w-full flex flex-col gap-10 justify-evenly items-center sm:gap-5 md:gap-0 sm:flex-row px-4 sm:px-10'>
+            <div className='w-[95%] sm:w-[50%] lg:w-[40%] xl:w-[30%] aspect-square relative '>
+                <Sphere banner={'banner'} item={'item'} images={['image_1','image_2','image_3','image_4','image_5','image_6','image_7','image_8','image_9','image_10','image_11','image_12']} />
+                <Sphere banner={'bannerAbs'} item={'itemV'} images={['image_1','image_2','image_3','image_4','image_5','image_6','image_7','image_8','image_9','image_10','image_11','image_12']} />
             </div>
             <div className="dark:text-white flex flex-col gap-3 sm:gap-5 items-center text-center sm:items-start">
                 <div className="flex flex-col gap-1 sm:gap-4">

@@ -22,7 +22,8 @@ body,
     -webkit-text-stroke: 1px #F3B436;
 }
 
-.banner{
+.banner,
+.bannerAbs {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -33,29 +34,58 @@ body,
     align-items: center;
 }
 
-.slider{
+.banner {
+    z-index: 1;
+}
+
+.bannerAbs {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    width: 40px;
+    height: 40px;
     transform-style: preserve-3d;
     transform: perspective(200px);
-    animation: autoRun 20s linear infinite;
+    animation: autoRun 5s linear infinite forwards;
 }
-@keyframes autoRun{
-    from{
-        transform: perspective(200px) rotateX(-16deg) rotateY(0deg);
-    }to{
-        transform: perspective(200px) rotateX(-16deg) rotateY(360deg);
+
+@keyframes autoRun {
+    0% {
+        transform: perspective(200px) rotateX(-16deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    34% {
+        transform: perspective(200px) rotateX(-16deg) rotateY(120deg) rotateZ(0deg);
+    }
+
+    67% {
+        transform: perspective(200px) rotateX(-16deg) rotateY(240deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(-16deg) rotateY(360deg) rotateZ(0deg);
     }
 }
 
-.item{
-    position: absolute;
+.item,
+.itemV {
+    position: absolute !important;
     inset: 0 0 0 0;
-    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(105px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(100px);
 }
 
-.item img{
+.itemV {
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) rotate(-90deg) translateZ(105px);
+}
+
+.item,
+.itemV img {
     width: 100%;
     height: 100%;
     object-fit: cover;

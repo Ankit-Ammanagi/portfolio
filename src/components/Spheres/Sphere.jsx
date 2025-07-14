@@ -1,20 +1,19 @@
-import React from 'react'
 
-const Sphere = () => {
+const Sphere = ({banner,item,images}) => {
     return (
-        <div className='banner'>
+        <div className={`${banner}`}>
             <div
                 className='slider'
-                style={{ '--quantity': 6 }}
+                style={{ '--quantity': 12 }}
             >
-                {[1, 2, 3, 4, 5, 6].map(pos => (
+                {images.map((img,pos) => (
                     <div
-                        key={pos}
-                        className='item'
+                        key={pos+1}
+                        className={`${item}`}
                         style={{ '--position': `${pos}` }}
                     >
                         <img
-                            src={`/images/image_${pos}.png`}
+                            src={`/images/${img}.png`}
                             alt="logo"
                         />
                     </div>
