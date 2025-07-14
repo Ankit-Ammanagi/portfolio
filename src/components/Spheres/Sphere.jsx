@@ -13,7 +13,7 @@ const Sphere = ({banner,item,images}) => {
                         style={{ '--position': `${pos}` }}
                     >
                         <img
-                            src={`/images/${img}.png`}
+                            src={`./images/${img}.png`}
                             alt="logo"
                         />
                     </div>
